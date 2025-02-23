@@ -1,7 +1,7 @@
 import streamlit as st
 from openai_chat import OpenAIChat
 
-api_key = st.secrets["openai"]["api_key"]
+api_key = st.secrets["openai"]["OPENAI_API_KEY"]
 
 chatbot = OpenAIChat(api_key)
 
