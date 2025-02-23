@@ -1,9 +1,9 @@
 import streamlit as st
-from openai_chat import OpenAIChat
+# from openai_chat import OpenAIChat
 
-api_key = st.secrets["openai"]["OPENAI_API_KEY"]
+# api_key = st.secrets["openai"]["OPENAI_API_KEY"]
 
-chatbot = OpenAIChat(api_key)
+# chatbot = OpenAIChat(api_key)
 
 # Set page title and favicon
 st.set_page_config(page_title="Chat UI", page_icon="💬", layout="wide")
@@ -68,9 +68,9 @@ prompt = st.chat_input("Say something")
 @st.dialog("Finding Response..")
 def dialog():
     with st.spinner("Wait for it...", show_time=True):
-            bot_response = chatbot.get_response(prompt)
+            # bot_response = chatbot.get_response(prompt)
         
-            st.session_state.messages.append({"role": "bot", "content": bot_response})
+            st.session_state.messages.append({"role": "bot", "content": "bot_response"})
 
             # Clear input after sending
             st.rerun()
