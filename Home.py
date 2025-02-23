@@ -68,9 +68,9 @@ prompt = st.chat_input("Say something")
 @st.dialog("Finding Response..")
 def dialog():
     with st.spinner("Wait for it...", show_time=True):
-            # bot_response = chatbot.get_response(prompt)
+            bot_response = chatbot.get_response(prompt)
         
-            st.session_state.messages.append({"role": "bot", "content": "bot_response"})
+            st.session_state.messages.append({"role": "bot", "content": bot_response})
 
             # Clear input after sending
             st.rerun()
