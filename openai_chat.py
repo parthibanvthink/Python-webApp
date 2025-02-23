@@ -3,8 +3,8 @@ from langchain.agents import initialize_agent, Tool, AgentType
 from langchain.memory import ConversationBufferMemory
 
 class OpenAIChat:
-    def __init__(self):
-        self.llm = ChatOpenAI(model="gpt-4", temperature=0)
+    def __init__(self, api_key):
+        self.llm = ChatOpenAI(model="gpt-4", temperature=0, openai_api_key=api_key)
         print("------init---------")
         # Define tools
         self.addition_tool = Tool(name="Addition", func=self.addition, description="Performs addition of two or more numbers. Example: '3+4'")

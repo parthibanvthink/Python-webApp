@@ -1,7 +1,9 @@
 import streamlit as st
 from openai_chat import OpenAIChat
 
-chatbot = OpenAIChat()
+api_key = st.secrets["openai"]["api_key"]
+
+chatbot = OpenAIChat(api_key)
 
 # Set page title and favicon
 st.set_page_config(page_title="Chat UI", page_icon="💬", layout="wide")
